@@ -1,19 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/bg_screen"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_main_card"
+            android:padding="16dp"
+            android:layout_marginTop="72dp"
+            android:paddingTop="22dp"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_header_card"
+                android:padding="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calcul des impôts locaux"
+                    android:textColor="@color/title_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimation fiscale de l'habitation"
+                    android:textColor="#FDF7FB"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom"
+                android:textColor="@color/label_text"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etNom"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_field"
+                android:hint="Ex : Durand"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_main"
+                android:textColorHint="@color/text_soft" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresse"
+                android:textColor="@color/label_text"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etAdresse"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_field"
+                android:hint="Ex : 6 rue de la gare"
+                android:inputType="textPostalAddress"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_main"
+                android:textColorHint="@color/text_soft" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surface"
+                android:textColor="@color/label_text"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etSurfaceMaison"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_field"
+                android:hint="Ex : 120"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_main"
+                android:textColorHint="@color/text_soft" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de pièces"
+                android:textColor="@color/label_text"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etNbPieces"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_field"
+                android:hint="Ex : 4"
+                android:inputType="number"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_main"
+                android:textColorHint="@color/text_soft" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="18dp">
+
+                <CheckBox
+                    android:id="@+id/cbPiscine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Piscine"
+                    android:textColor="@color/text_main"
+                    android:textStyle="bold"
+                    android:buttonTint="@color/btn_end"
+                    android:layout_marginEnd="18dp" />
+
+                <Button
+                    android:id="@+id/btnCalculerTaxe"
+                    android:layout_width="140dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_button"
+                    android:text="Calculer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAffichageResultat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_result"
+                android:padding="18dp"
+                android:text="Montant de base : 0.00 DH&#10;Supplément habitation : 0.00 DH&#10;Total à payer : 0.00 DH"
+                android:textColor="@color/text_main"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="6dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

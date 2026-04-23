@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="bg_start">#89CFF0</color>
+    <color name="bg_end">#F8C8DC</color>
+
+    <color name="panel_bg">#FFFDFE</color>
+    <color name="panel_stroke">#B7D7F2</color>
+
+    <color name="field_top">#FFFFFF</color>
+    <color name="field_bottom">#F6FBFF</color>
+    <color name="field_stroke">#A9CFEA</color>
+
+    <color name="header_card_start">#6DB7E8</color>
+    <color name="header_card_end">#F2A7C2</color>
+
+    <color name="btn_start">#7CC7F2</color>
+    <color name="btn_end">#E78FB3</color>
+    <color name="btn_shadow">#B96F91</color>
+
+    <color name="result_start">#FDF7FB</color>
+    <color name="result_end">#EAF6FF</color>
+    <color name="result_stroke">#A9CFEA</color>
+
+    <color name="title_text">#FFFFFF</color>
+    <color name="text_main">#2C2C3A</color>
+    <color name="text_soft">#7A7A8E</color>
+    <color name="label_text">#4F4F68</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="actionbar_main">#69B4E4</color>
+    <color name="actionbar_dark">#4E9BCB</color>
+    <color name="accent_soft">#F2A7C2</color>
 </resources>
